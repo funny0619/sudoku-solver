@@ -1,5 +1,4 @@
 import math
-
 def isvalid(arr, row, col, value):
     length = int(math.sqrt(len(arr)))
     # check row
@@ -29,8 +28,6 @@ def findEmpty(arr):
 def sudokuSolver(arr):
     found = findEmpty(arr)
     if not found:
-        for i in arr:
-            print(i)
         return True
     else:
         row = found[0]
@@ -41,15 +38,3 @@ def sudokuSolver(arr):
             if sudokuSolver(arr):
                 return True
             arr[row][col] = 0
-
-chessArray = [[0, 7, 0, 0, 2, 0, 5, 1, 0],
-              [0, 0, 0, 0, 0, 0, 0, 0, 2],
-              [0, 6, 0, 0, 0, 0, 3, 0, 7],
-              [5, 0, 0, 0, 7, 0, 0, 4, 0],
-              [0, 0, 9, 0, 0, 0, 2, 0, 5],
-              [8, 0, 0, 5, 0, 0, 6, 0, 0],
-              [0, 1, 0, 3, 9, 6, 0, 0, 0],
-              [0, 0, 0, 0, 0, 0, 0, 0, 0],
-              [7, 0, 0, 0, 0, 0, 0, 0, 9]]
-
-sudokuSolver(chessArray)
