@@ -21,8 +21,8 @@ instructionfont = pygame.font.SysFont('arial', 20)
 solverX = clearerX = int(height + winoffset / 3 / 2)
 solverY = int(height / 2)
 clearerY = solverY + 2 * cellsize
-solveButton = pygame.draw.rect(win, LIGHTGRAY, (solverX, solverY, 2 * cellsize, int(winoffset / 3)))
-clearButton = pygame.draw.rect(win, LIGHTGRAY, (solverX, solverY + 2 * cellsize, 2 * cellsize, int(winoffset / 3)))
+solveButton = pygame.Rect(solverX, solverY, 2 * cellsize, int(winoffset / 3))
+clearButton = pygame.Rect(solverX, solverY + 2 * cellsize, 2 * cellsize, int(winoffset / 3))
 pygame.display.set_caption("Sudoku Solver")
 arr = [[0, 0, 0, 0, 0, 0, 0, 0, 0],
        [0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -38,8 +38,8 @@ arr = [[0, 0, 0, 0, 0, 0, 0, 0, 0],
 
 def drawWindow():
 
-    pygame.draw.rect(win, LIGHTGRAY, (solverX, solverY, 2 * cellsize, int(winoffset / 3)))
-    pygame.draw.rect(win, LIGHTGRAY, (clearerX, clearerY, 2 * cellsize, int(winoffset / 3)))
+    pygame.draw.rect(win, LIGHTGRAY, solveButton)
+    pygame.draw.rect(win, LIGHTGRAY, clearButton)
 
     solverButtonX = int((solverX + solverX + 2 * cellsize) / 2)
     solverButtonY = int((solverY + solverY + winoffset / 3) / 2)
@@ -143,4 +143,3 @@ def main():
 
 main()
 pygame.quit()
-
