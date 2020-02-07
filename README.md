@@ -1,5 +1,5 @@
 # Sudoku Solver
-Sudoku is a number puzzle so that each row, column, and square subgrids do not have replicating numbers ranging from 1 to 9. This projects uses a backtracking algorithm crack sudoku. Pygame module was used to construct the GUI.
+Sudoku is a number puzzle so that each row, column, and square subgrids do not have replicating numbers ranging from 1 to 9. This projects uses a backtracking algorithm to crack sudoku. Pygame module was used to construct the GUI.
 
 # Installation
 the Pygame module is needed for the GUI of the Sudoku Solver to work propery.
